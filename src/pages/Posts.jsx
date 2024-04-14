@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchUsers } from "../redux/studets/studentsAction";
 
 const Students = () => {
-  const { loading, students, error } = useSelector((state) => state.students);
+  const { loading, users, error } = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -14,13 +14,28 @@ const Students = () => {
     <div>
       {loading && <h1>Loading...</h1>}
       {error && <h1>{error}</h1>}
-      {students.length > 0 && (
+      {users.length > 0 && (
         <ul>
-          {students.map((user) => (
-            <li key={user.id}>
-              {user.id}. {user.name}
-            </li>
-          ))}
+          <table border={1}>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>ISM</th>
+                <th>FAMIOLIYA</th>
+                <th>GURUH</th>
+              </tr>
+            </thead>
+            {users.map((user) => (
+              <tbody key={user.id}>
+                <tr>
+                  <td>{user.id}</td>
+                  <td>{user.name}</td>
+                  <td>{user.lastname}</td>
+                  <td>{user.group}</td>
+                </tr>
+              </tbody>
+            ))}
+          </table>
         </ul>
       )}
     </div>

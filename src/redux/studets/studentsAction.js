@@ -1,23 +1,27 @@
 import axios from "axios";
 
-import { FETCH_STUDENTS_ERROR, FETCH_STUDENTS_REQUEST, FETCH_STUDENTS_SUCCESS } from "./studentsTypes";
+import {
+  FETCH_USERS_ERROR,
+  FETCH_USERS_REQUEST,
+  FETCH_USERS_SUCCESS,
+} from "./studentsTypes";
 
 export const fetchUsersRequest = () => {
   return {
-    type: FETCH_STUDENTS_REQUEST,
+    type: FETCH_USERS_REQUEST,
   };
 };
 
-export const fetchUsersSuccess = (students) => {
+export const fetchUsersSuccess = (users) => {
   return {
-    type: FETCH_STUDENTS_SUCCESS,
-    payload: students,
+    type: FETCH_USERS_SUCCESS,
+    payload: users,
   };
 };
 
 export const fetchUsersError = (error) => {
   return {
-    type: FETCH_STUDENTS_ERROR,
+    type: FETCH_USERS_ERROR,
     payload: error,
   };
 };
@@ -26,7 +30,7 @@ export const fetchUsers = () => {
   return (dispatch) => {
     dispatch(fetchUsersRequest());
     axios
-      .get("https://jsonplaceholder.typicode.com/users")
+      .get("http://localhost:3000/sudents")
       .then((res) => {
         const data = res.data;
         dispatch(fetchUsersSuccess(data));

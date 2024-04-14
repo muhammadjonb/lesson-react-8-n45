@@ -1,4 +1,8 @@
-import { FETCH_STUDENTS_ERROR, FETCH_STUDENTS_REQUEST, FETCH_STUDENTS_SUCCESS } from "./studentsTypes";
+import {
+  FETCH_USERS_ERROR,
+  FETCH_USERS_REQUEST,
+  FETCH_USERS_SUCCESS,
+} from "./studentsTypes";
 
 const initialState = {
   loading: false,
@@ -6,21 +10,20 @@ const initialState = {
   error: "",
 };
 
-
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_STUDENTS_REQUEST:
+    case FETCH_USERS_REQUEST:
       return {
         ...state,
         loading: true,
       };
-    case FETCH_STUDENTS_SUCCESS:
+    case FETCH_USERS_SUCCESS:
       return {
         loading: false,
         users: action.payload,
         error: "",
       };
-    case FETCH_STUDENTS_ERROR:
+    case FETCH_USERS_ERROR:
       return {
         loading: false,
         users: [],

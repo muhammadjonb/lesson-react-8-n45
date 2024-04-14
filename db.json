@@ -1,0 +1,65 @@
+{
+  "sudents": [
+    {
+        "id": 1,
+        "name": "Emily",
+        "lastname": "Jones",
+        "group": "n41"
+    },
+    {
+        "id": 2,
+        "name": "David",
+        "lastname": "Johnson",
+        "group": "n42"
+    },
+    {
+        "id": 3,
+        "name": "Laura",
+        "lastname": "Davis",
+        "group": "n43"
+    },
+    {
+        "id": 4,
+        "name": "James",
+        "lastname": "Garcia",
+        "group": "n44"
+    },
+    {
+        "id": 5,
+        "name": "Anna",
+        "lastname": "Smith",
+        "group": "n45"
+    },
+    {
+        "id": 6,
+        "name": "Jane",
+        "lastname": "Johnson",
+        "group": "n46"
+    },
+    {
+        "id": 7,
+        "name": "John",
+        "lastname": "Garcia",
+        "group": "n47"
+    },
+    {
+        "id": 8,
+        "name": "David",
+        "lastname": "Brown",
+        "group": "n48"
+    },
+    {
+        "id": 9,
+        "name": "John",
+        "lastname": "Garcia",
+        "group": "n49"
+    },
+    {
+        "id": 10,
+        "name": "David",
+        "lastname": "Doe",
+        "group": "n40"
+    }
+]
+
+}

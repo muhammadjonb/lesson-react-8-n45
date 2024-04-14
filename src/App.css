@@ -36,3 +36,14 @@ a.active span {
   width: 100%;
   padding: 8px 0;
 }
+
+
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+td, th{
+  border: 1px solid black;
+  padding: 10px;
+}
